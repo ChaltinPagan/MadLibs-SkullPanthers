@@ -9,7 +9,7 @@ const Submit = ({ color, nounPlural, noun, adjective}) => {
       {nounPlural}<br />
       {noun}<br />
       {adjective}<br />
-      <p></p>
+      <p>stuff</p>
       <Link to="/madlibs">Back</Link>
     </div>
   )

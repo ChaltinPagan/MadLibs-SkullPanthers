@@ -14,13 +14,12 @@ const MadLibs = ({ onChange, value, onClick }) => {
   return (
     <div>
       
-
-      <p style={madStyles.p}>{"Type in a word or click 'random.'"}</p>
+      <p id="ptags">{"Type in a word or click 'random.'"}</p>
 
       Color:<br/>
       <input id="color" 
       className="input" 
-      placeholder="Enter color..."
+      placeholder="Enter a color..."
       type="text" 
       value={value.color}
       style={madStyles.input}
@@ -30,7 +29,7 @@ const MadLibs = ({ onChange, value, onClick }) => {
       Noun (plural):<br />
       <input id="nounPlural" 
       className="input"
-      placeholder="Enter noun (plural)..."
+      placeholder="Enter a noun (plural)..."
       type="text"
       value={value.nounPlural}
       style={madStyles.input}
@@ -40,7 +39,7 @@ const MadLibs = ({ onChange, value, onClick }) => {
       Noun:<br />
       <input id="noun" 
       className="input"
-      placeholder="Enter noun..."
+      placeholder="Enter a noun..."
       type="text"
       value={value.noun}
       style={madStyles.input}
@@ -50,7 +49,7 @@ const MadLibs = ({ onChange, value, onClick }) => {
       Adjective:<br />
       <input id="adjective" 
       className="input"
-      placeholder="Enter adjective..."
+      placeholder="Enter an adjective..."
       type="text"
       value={value.adjective}
       style={madStyles.input}

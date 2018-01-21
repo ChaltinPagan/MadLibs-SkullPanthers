@@ -2,7 +2,8 @@ import React from "react";
 import { Route, Switch, Link } from "react-router-dom";
 
 import MadLibs from "./MadLibs";
-import Submit from "./Submit";
+import Result from "./Result";
+import About from "./About";
 import wordsAPI from '../api/wordsAPI';
 
 const styles = {
@@ -20,26 +21,8 @@ class MadLibsHandle extends React.Component {
       noun: "", 
       adjective: ""
     }
+    this.phrase = `The ${this.state.noun} jumped over the ${this.state.nounPlural} in double ${this.state.adjective} during the ${this.state.color} moon.`
   };
-
-  // handleChange = (e) => {
-  //   this.setState({
-  //     [e.target.id]: e.target.value
-  //   })
-  // }
-
-  // handleSubmit = () => {
-  //   const color = document.getElementById("color").value;
-  //   const nounPlural = document.getElementById("nounPlural").value;
-  //   const noun = document.getElementById("noun").value;
-  //   const adjective = document.getElementById("adjective").value;
-  //   this.setState({
-  //     color: color,
-  //     nounPlural: nounPlural,
-  //     noun: noun,
-  //     adjective: adjective
-  //   })
-  // }
 
   handleRandom = e => {
     const id = e.target.id;
@@ -63,6 +46,10 @@ class MadLibsHandle extends React.Component {
     })
   }
 
+  componentDidMount() {
+    this.handleAllRandom();
+  }
+
   handleReset = () => {
     this.setState({
       color: "",
@@ -81,27 +68,21 @@ class MadLibsHandle extends React.Component {
           value={this.state}
           onClick={this.handleRandom} />
 
-        <Link to="/madlibs/submit"><button style={styles.button}>Submit</button></Link>
+        <Link to="/madlibs/result"><button style={styles.button}>Submit</button></Link>
         <button style={styles.button} 
           onClick={this.handleReset}>Reset</button>
 
         <button style={styles.button} 
           onClick={this.handleAllRandom}>All Random</button>
 
-        {/* <Submit 
-          color={color}
-          nounPlural={nounPlural}
-          noun={noun}
-          adjective={adjective} /> */}
-
       </div>
     )
   }
 
-  renderSubmit = () => {
+  renderResult = () => {
     const { color, nounPlural, noun, adjective } = this.state;
     return (
-      <Submit
+      <Result
         color={color}
         nounPlural={nounPlural}
         noun={noun}
@@ -128,7 +109,7 @@ class MadLibsHandle extends React.Component {
         </header>
         <Switch>
           <Route exact path="/madlibs" render={this.renderMadLibs} />
-          <Route path="/madlibs/submit" render={this.renderSubmit} />
+          <Route path="/madlibs/result" render={this.renderResult} />
       </Switch>
       </div>
     )

@@ -2639,6 +2639,7 @@ const wordsAPI = {
   preprosition: preps
 };
 
+
 let randColor = () =>
   wordsAPI.colors[Math.floor(Math.random() * wordsAPI.colors.length)];
 let randVerb = () => verbs[Math.floor(Math.random() * verbs.length)];
@@ -2652,7 +2653,7 @@ let randAdv = () =>
 let randPlural = () =>
   wordsAPI.plural[Math.floor(Math.random() * wordsAPI.plural.length)];
 
-console.log(randVerb());
+
 
 export default {
   randVerb,

@@ -6,12 +6,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.letters1 {
-  font-size:20px;
-  text-align: center;
-  padding-right:150px;
-}
-
+/*Skull Panthers logo in upper left corner of the screen.*/
 #logo {
   background-image: url("https://rawgit.com/ChaltinPagan/MadLibs-SkullPanthers/69e58a60cac33db442d7bbd6b02c45cf0897ad11/media/logo_glow-2.png");
   background-size: 100%;
@@ -28,24 +23,30 @@ body {
   filter: drop-shadow(0px 0px 10px #fff);
 }
 
+/*Beginning of Mad Libs title animation*/
 .flexcontainer {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
   -webkit-align-items: center;
-  align-items:  center;
-  -webkit-justify-content:  center;
+  align-items: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
+.letters1 {
+  font-size: 20px;
+  text-align: center;
+  padding-right: 150px;
+}
+
 #M {
-  color: #11998e;
+  color: teal;
   display: inline-block;
   font-family: "Monoton", cursive;
   font-size: 7em;
 }
-
 #M:hover,
 #A:hover,
 #D:hover,
@@ -80,8 +81,8 @@ body {
   transform: none;
   -webkit-transform-origin: 100% 70% 0;
   transform-origin: 50% 50% 0;
+  transition-timing-function: linear;
 }
-
 #A {
   display: inline-block;
   color: teal;
@@ -90,7 +91,6 @@ body {
 
   font-size: 3em;
 }
-
 #D {
   color: teal;
   display: inline-block;
@@ -98,7 +98,6 @@ body {
   font-size: 3em;
   font-family: "Monoton", cursive;
 }
-
 #L {
   color: teal;
   display: inline-block;
@@ -106,7 +105,6 @@ body {
   font-size: 6em;
   padding: 10px;
 }
-
 #I {
   color: teal;
   display: inline-block;
@@ -114,42 +112,15 @@ body {
   font-size: 3em;
   padding: 10px;
 }
-
 #B {
   display: inline-block;
   color: teal;
   font-family: "Monoton", cursive;
   font-size: 3em;
 }
+/*End of Mad Libs title animation */
 
-#playbutton {
-  background: #3498db;
-  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-  background-image: -o-linear-gradient(top, #3498db, #2980b9);
-  background-image: linear-gradient(to bottom, #3498db, #2980b9);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Arial;
-  color: black;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-  margin-left:120px
-}
-
-#playbutton:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none;
-}
-
+/*Book animation in Home.js*/
 .book {
   position: absolute;
   top: 0;
@@ -157,24 +128,23 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  width:50px;
-  height:50px;
+  width: 50px;
+  height: 50px;
   perspective: 70rem;
 }
 
 .page {
-  margin-left:25px;
-  margin-top:80px;
+  margin-left: 15px;
+  margin-top: 250px;
   background-color: whitesmoke;
   transform: rotateY(0deg);
-  width:50px;
-  height:50px;
+  width: 50px;
+  height: 50px;
   text-align: right;
   font-size: 8px;
   color: #777;
   font-family: monospace;
 }
-
 .page::before,
 .page::after {
   display: block;
@@ -182,7 +152,6 @@ body {
   content: "";
   padding-bottom: 1rem;
 }
-
 .cover,
 .page {
   position: absolute;
@@ -265,14 +234,45 @@ body {
     z-index: 999;
   }
 }
+/*End of book animation on Home page*/
 
+/*In Home.js, button links to MadLibs.js */
+#playbutton {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: black;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 120px;
+}
+
+#playbutton:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+/*Input fields in MadLibs.js */
 .input:focus {
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 19em;
-  height:3em;
+  height: 3em;
   cursor: pointer;
   top: 0;
   right: 0;
@@ -284,38 +284,62 @@ body {
   -webkit-border-radius: 21px;
   border-radius: 21px;
   font: normal 25px/normal "Antic", Helvetica, sans-serif;
-  color: rgba(8,49,40,3);
+  color: rgba(8, 49, 40, 3);
   text-decoration: normal;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  background: rgba(8,49,40,100);
-  -webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5) inset;
-  box-shadow: 1px 5px 2px 0 rgba(0,0,0,0.5) inset;
-  -webkit-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -moz-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -o-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  background: rgba(8, 49, 40, 100);
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 1px 5px 2px 0 rgba(0, 0, 0, 0.5) inset;
   transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
 }
 
 .input:hover {
-  color: rgba(40,181,40,1);
-  background: rgba(40,0,40,0.4);
-  -webkit-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -moz-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  -o-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  color: rgba(40, 181, 40, 1);
+  background: rgba(40, 0, 40, 0.4);
   transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
-  box-shadow:
-    0 0 30px 15px #fff,
-    0 0 500px 20px #0ff;
+  box-shadow: 0 0 30px 15px #fff, 0 0 500px 20px #0ff;
 }
 
-.input{
+.input {
   width: 213px;
   cursor: default;
   padding: -13px 20px 0;
-  color: rgba(0,128,128,1);
+  color: red;
+  font-size: 15px;
   -webkit-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
   -moz-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
   -o-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
   transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
 }
+/*End of input fields in MadLibs.js*/
+
+/*In MadLibs.js file*/
+#ptags {
+  font-family: fantasy;
+  font-size: 30px;
+}
+
+/*Styling for buttons on MadLibs.js file*/
+button {
+  color: #08233e;
+  font: 15px Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  padding: 5px;
+  background: url(overlay.png) repeat-x center #ffcc00;
+  background-color: teal;
+  border-bottom: 1px solid #9f9f9f;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+/*Styling for list items and links in About.js*/
+li {
+  margin-bottom: 20px;
+}
+
+a { 
+  color: teal;
+}
+/*End of styling for links in About.js*/

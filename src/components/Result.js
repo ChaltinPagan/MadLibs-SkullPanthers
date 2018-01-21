@@ -6,7 +6,7 @@ const Result = ({ color, nounPlural, noun, adjective }) => {
   let phrases = [
     `The ${noun} jumped over the ${nounPlural} in double ${adjective} during the ${color} moon.`,
     `Ask not what ${adjective} ${nounPlural} can do for you, but what ${noun} can do for ${color} cats.`,
-    `Don't trust ${adjective} millenials with over 30 ${nounPlural}, especially if their ${noun} wears ${color} shoes.`
+    `Don't trust ${adjective} millennials with over 30 ${nounPlural}, especially if their ${noun} wears ${color} shoes.`
   ];
 
   let random = Math.floor(Math.random() * phrases.length);
